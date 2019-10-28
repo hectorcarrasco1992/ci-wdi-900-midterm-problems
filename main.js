@@ -23,9 +23,11 @@ function exclaim(str) {
   let exclamation = '!'
   if (str.includes('!')){
     return str
-  } else if (str.length -1 !== '!'){
-    return str + exclamation
+  } else if (str.includes('!')){
+    str.remove(str.indexOf('!'))
   } 
+
+  return str + exclamation
     
 }
 
@@ -35,8 +37,6 @@ function countWords(str) {
     if (str[i] === str[i]){
       count ++
       return count
-    } else if( str.indexOf(i) === ' '){
-      return count
     }
   }
  
@@ -44,7 +44,7 @@ function countWords(str) {
 
 function containsDigit(str) {
   for (let i = 0; i <str.length; i++){
-  if ( str[i].includes('0123456789')){
+  if ( str[i].includes('')|| str[i].includes(NaN)){
     return true
   }else return false
   }
@@ -93,11 +93,10 @@ function containsSpace(str) {
 }
 
 function digits(num) {
+  if(num === num){  
+    num.split('')
+  }
   
-    
-  
-  
-
 }
 
 function truncate(str) {
@@ -119,10 +118,11 @@ function isValidPassword(str) {
 }
 
 function onlyPunchy(str) {
-  let exclamationPoint = str.indexOf('!')
+  let arr = []
   if(str.length < 15){
-    return str.slice(0,)
-  } 
+    return arr.push(str.tr)
+  }
+  
 }
 
 
